@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GA Cutter Dispatch</title>
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="icon" href="icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="GA Dispatch">
+<meta name="mobile-web-app-capable" content="yes">
+<style>
+  html,body{
+    height:100%;
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:#ffffff;
+    color:#1a1a1a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .wrap{
+    text-align:center;
+    padding:24px;
+    max-width:340px;
+  }
+  img{
+    width:120px;
+    height:120px;
+    border-radius:22px;
+    box-shadow:0 4px 16px rgba(0,0,0,0.15);
+    margin-bottom:20px;
+  }
+  a.btn{
+    display:inline-block;
+    background:#c1272d;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    padding:14px 28px;
+    border-radius:10px;
+    font-size:17px;
+  }
+  p.sub{
+    color:#666;
+    font-size:14px;
+    margin-top:16px;
+    line-height:1.4;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <img src="icon.png" alt="Georgia Cutter">
+  <div><a class="btn" id="openBtn" href="#">Open Dispatch Form</a></div>
+  <p class="sub">First time here? Tap the Share icon below, then "Add to Home Screen" to install this as an app icon.</p>
+</div>
+<script>
+  var FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSepwCkKGwQjxkh52Lp3MqlZNRhDHtVIxnXDKcPNMc6CNIXfKQ/viewform";
+  document.getElementById("openBtn").href = FORM_URL;
+  // When launched from the Home Screen icon (standalone mode), skip straight to the form.
+  if (window.navigator.standalone) {
+    window.location.replace(FORM_URL);
+  }
+</script>
+</body>
+</html>
